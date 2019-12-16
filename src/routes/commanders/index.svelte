@@ -63,7 +63,7 @@
     filterCommanders();
   };
   const showAllAcquisitions = () => {
-    acquisition = ["free", "pay"];
+    acquisition = ["Free", "Pay"];
     filterCommanders();
   };
 
