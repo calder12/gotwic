@@ -1,9 +1,13 @@
 ---
 layout: blog
 title: Andrea
-troop_type: Infantry
+date: 2019-12-16T01:31:31.855Z
+troop-type: Infantry
 type: Defensive
 acquisition: Pay
-date: 2019-12-16T01:31:31.855Z
+image:
+  alt: Image of Andrea
+  src: /uploads/andrea.png
+  title: Image of Andrea
 ---
 Andrea
