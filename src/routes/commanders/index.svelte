@@ -16,15 +16,9 @@
   let showFilters = false;
   let troopClasses = ["Infantry", "Cavalry", "Bowmen", "Spearmen"];
   let troopType = [
-    "Area Attack",
-    "Attack & Defense",
-    "Attack & CC",
-    "Defense & Disable",
-    "Defense & CC",
-    "Defensive",
-    "Single Target Attack",
-    "Support",
-    "Support & Healing"
+    "Tank",
+    "DPS",
+    "Support"
   ];
   let acquisition = ["Free", "Pay"];
 
@@ -43,15 +37,9 @@
   };
   const showAllTypes = () => {
     troopType = [
-      "Area Attack",
-      "Attack & Defense",
-      "Attack & CC",
-      "Defense & Disable",
-      "Defense & CC",
-      "Defensive",
-      "Single Target Attack",
-      "Support",
-      "Support & Healing"
+    "Tank",
+    "DPS",
+    "Support"
     ];
     filterCommanders();
   };
