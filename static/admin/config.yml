@@ -26,7 +26,7 @@ collections:
       - {label: "Name", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Troop Type", name: "troop_type", widget: "select", options: ["Infantry", "Spearmen", "Cavalry", "Bowmen"]}
-      - {label: "Type", name: "type", widget: "string"}
+      - {label: "Type", name: "type", widget: "select", options: ["Area Attack", "Attack & Defense", "Defense & Disable", "Defense & CC", "Single Target Attack", "Support", "Support & Healing"]}
       - {label: "Acquisition", name: "acquisition", widget: "string"}
       - name: image
         label: Image
