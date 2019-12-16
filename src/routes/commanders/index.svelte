@@ -74,7 +74,7 @@
 
   function filterCommanders() {
     displaycommanders = commanders.filter(commander =>
-      troopClasses.includes(commander.class)
+      troopClasses.includes(commander.troop_type)
     );
     displaycommanders = displaycommanders.filter(commander =>
       acquisition.includes(commander.acquisition)
@@ -344,7 +344,7 @@
         <img
           class="commander-image"
           src="/commanders/{commander.slug}.png"
-          alt="Image of {commander.title} - {commander.class} commander." />
+          alt="Image of {commander.title} - {commander.troop_type} commander." />
       </div>
     </a>
   {/each}
