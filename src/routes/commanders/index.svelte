@@ -17,7 +17,6 @@
   let troopClasses = ["Infantry", "Cavalry", "Bowmen", "Spearmen"];
   let troopType = [
     "Area Attack",
-    "Area Attack (Line)",
     "Attack & Defense",
     "Attack & CC",
     "Defense & Disable",
@@ -27,7 +26,7 @@
     "Support",
     "Support & Healing"
   ];
-  let acquisition = ["free", "pay"];
+  let acquisition = ["Free", "Pay"];
 
   const toggleFilters = () => {
     showFilters = !showFilters;
@@ -45,7 +44,6 @@
   const showAllTypes = () => {
     troopType = [
       "Area Attack",
-      "Area Attack (Line)",
       "Attack & Defense",
       "Attack & CC",
       "Defense & Disable",
@@ -229,16 +227,6 @@
             value="Area Attack" />
           Area Attack
         </label>
-        <label for="areaattackline">
-          <input
-            name="areaattackline"
-            id="areaattackline"
-            type="checkbox"
-            bind:group={troopType}
-            on:change={filterCommanders}
-            value="Area Attack (Line)" />
-          Area Attack (Line)
-        </label>
         <label for="attackdefense">
           <input
             name="attackdefense"
@@ -268,6 +256,16 @@
             on:change={filterCommanders}
             value="Defense & CC" />
           Defense &amp; CC
+        </label>
+        <label for="defensive">
+          <input
+            name="defensive"
+            id="defensive"
+            type="checkbox"
+            bind:group={troopType}
+            on:change={filterCommanders}
+            value="Defensive" />
+          Defensive
         </label>
         <label for="singletarget">
           <input
@@ -315,7 +313,7 @@
             type="checkbox"
             bind:group={acquisition}
             on:change={filterCommanders}
-            value="free" />
+            value="Free" />
           Free to Play
         </label>
         <label for="pay">
@@ -325,7 +323,7 @@
             type="checkbox"
             bind:group={acquisition}
             on:change={filterCommanders}
-            value="pay" />
+            value="Pay" />
           Pay to Win
         </label>
       </div>
@@ -338,13 +336,16 @@
 {/if}
 <div class="commanders">
   {#each displaycommanders as commander}
-    <a rel="prefetch" href="commanders/{commander.slug}" class="commander-link" transition:fade="{{delay: 250, duration: 300}}">
+    <a rel="prefetch" href="commanders/{commander.slug}" class="commander-link" transition:fade="{{delay: 50, duration: 150}}">
       <div class="commander">
         <h3>{commander.title}</h3>
         <img
           class="commander-image"
           src="/commanders/{commander.slug}.png"
           alt="Image of {commander.title} - {commander.troop_type} commander." />
+          {commander.troop_type}<br>
+          {commander.type}<br>
+          {commander.acquisition}
       </div>
     </a>
   {/each}
