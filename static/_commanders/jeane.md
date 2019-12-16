@@ -3,7 +3,7 @@ layout: blog
 title: Jeane
 date: 2019-12-16T03:03:43.304Z
 troop_type: Cavalry
-type: Support & Healing
+type: Support
 acquisition: Free
 image:
   alt: Jeane
