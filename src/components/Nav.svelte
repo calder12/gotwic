@@ -1,62 +1,137 @@
 <script>
-	export let segment;
+  export let segment;
 </script>
 
 <style>
-	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
-	}
+  * {
+    box-sizing: border-box;
+  }
 
-	ul {
-		margin: 0;
-		padding: 0;
-	}
+  .main-navigation {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 2em;
+    margin-top: 1rem;
+  }
 
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
+  ul {
+    margin: 0;
+    padding: 0;
+  }
 
-	li {
-		display: block;
-		float: left;
-	}
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu li {
+    display: block;
+    list-style-type: none;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .menu li a {
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    color: #777;
+    padding: 1rem;
+  }
+  .menu li a:hover {
+    background: #666;
+    color: #fff;
+  }
 
-	.selected {
-		position: relative;
-		display: inline-block;
-	}
+  @media (min-width: 800px) {
+    .menu {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 
-	.selected::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	}
+  .menu-item-has-children > a:after {
+    content: "\2304";
+		padding: 1px;
+		margin-top: -15px;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
 
-	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
-	}
+  nav ul ul {
+    display: none;
+  }
+
+  @media (min-width: 800px) {
+    nav ul ul {
+      display: none;
+      position: absolute;
+    }
+  }
+
+  nav ul li:hover > ul {
+    display: block;
+    color: #fff;
+    padding-left: 2rem;
+  }
+
+  @media (min-width: 800px) {
+    nav ul li:hover > ul {
+      padding-left: 0;
+      background: #666;
+      z-index: 999;
+    }
+
+    nav ul li:hover > ul a {
+      color: #fff;
+    }
+
+    .sub-menu li:hover,
+    .sub-menu li a:hover {
+      background: #ddd;
+      color: #777;
+    }
+
+    .sub-menu li {
+      display: flex;
+      padding-right: 2em;
+    }
+
+    nav ul ul ul {
+      margin: 0 0 0 100%;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    }
+  }
+  .menu a.selected {
+		background: #777;
+		color: #fff;
+  }
 </style>
 
-<nav>
-	<ul>
-		<li><a class:selected='{segment === undefined}' href='.'>home</a></li>
-		<li><a class:selected='{segment === "about"}' href='about'>about</a></li>
-		<li><a class:selected='{segment === "research"}' href='research'>research</a></li>
-		<li><a class:selected='{segment === "commanders"}' href='commanders'>commanders</a></li>
+<nav class="main-navigation">
+  <ul class="menu">
+    <li>
+      <a class:selected={segment === undefined} href=".">home</a>
+    </li>
+    <li>
+      <a class:selected={segment === 'about'} href="about">about</a>
+    </li>
+    <li class="menu-item-has-children">
+      <a class:selected={segment === 'research'} href="research">research</a>
+      <ul class="sub-menu">
+        <li>
+          <a href="/research/calculator">research calculator</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a class:selected={segment === 'commanders'} href="commanders">
+        commanders
+      </a>
+    </li>
 
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
+    <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
 		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch class:selected='{segment === "blog"}' href='blog'>blog</a></li>
-	</ul>
+    <li>
+      <a rel="prefetch" class:selected={segment === 'blog'} href="blog">blog</a>
+    </li>
+  </ul>
 </nav>

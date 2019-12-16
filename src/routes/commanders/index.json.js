@@ -1,24 +1,3 @@
-// import commanders from './_commanders.js';
-
-// const contents = JSON.stringify(commanders.map(commander => {
-// 	return {
-// 		title: commander.title,
-// 		slug: commander.slug,
-// 		class: commander.class,
-// 		type: commander.type,
-// 		acquisition: commander.acquisition,
-// 		militaryBonus: commander.militaryBonus
-// 	};
-// }));
-
-// export function get(req, res) {
-// 	res.writeHead(200, {
-// 		'Content-Type': 'application/json'
-// 	});
-
-// 	res.end(contents);
-// }
-
 import fm from 'front-matter';
 import glob from 'glob';
 import {fs} from 'mz';
@@ -43,7 +22,7 @@ export async function get(req, res) {
   );
 
   // Sort by reverse date, because it's a blog
-  postsFrontMatter.sort((a, b) => (a.date < b.date ? 1 : -1));
+  postsFrontMatter.sort((a, b) => (a.date > b.date ? 1 : -1));
 
   res.writeHead(200, {
     'Content-Type': 'application/json',

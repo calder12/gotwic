@@ -15,11 +15,7 @@
   let displaycommanders = commanders;
   let showFilters = false;
   let troopClasses = ["Infantry", "Cavalry", "Bowmen", "Spearmen"];
-  let troopType = [
-    "Tank",
-    "DPS",
-    "Support"
-  ];
+  let troopType = ["Tank", "DPS", "Support"];
   let acquisition = ["Free", "Pay"];
 
   const toggleFilters = () => {
@@ -36,11 +32,7 @@
     filterCommanders();
   };
   const showAllTypes = () => {
-    troopType = [
-    "Tank",
-    "DPS",
-    "Support"
-    ];
+    troopType = ["Tank", "DPS", "Support"];
     filterCommanders();
   };
 
@@ -81,7 +73,7 @@
 
   .commanders {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 320px));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-gap: 1rem;
   }
   a {
@@ -103,12 +95,15 @@
   }
   .commander h3 {
     position: absolute;
-    top: 0.3755rem;
+    bottom: 1.375rem;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     color: #fff;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
   }
   .filter-group {
     display: flex;
@@ -274,16 +269,17 @@
 {/if}
 <div class="commanders">
   {#each displaycommanders as commander}
-    <a rel="prefetch" href="commanders/{commander.slug}" class="commander-link" transition:fade="{{delay: 50, duration: 150}}">
+    <a
+      rel="prefetch"
+      href="commanders/{commander.slug}"
+      class="commander-link"
+      transition:fade={{ delay: 50, duration: 150 }}>
       <div class="commander">
         <h3>{commander.title}</h3>
         <img
           class="commander-image"
           src="/commanders/{commander.slug}.png"
           alt="Image of {commander.title} - {commander.troop_type} commander." />
-          {commander.troop_type}<br>
-          {commander.type}<br>
-          {commander.acquisition}
       </div>
     </a>
   {/each}
