@@ -3,7 +3,7 @@ layout: blog
 title: Barrett
 date: 2019-12-16T02:45:38.311Z
 troop_type: Infantry
-type: Area Attack
+type: DPS
 acquisition: Free
 image:
   alt: Barrett
