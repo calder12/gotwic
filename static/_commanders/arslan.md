@@ -3,7 +3,7 @@ layout: blog
 title: Arslan
 date: 2019-12-16T02:10:56.139Z
 troop_type: Spearmen
-type: Single Target Attack
+type: DPS
 acquisition: Free
 image:
   alt: Image of Arslan a Spearmen Commander
