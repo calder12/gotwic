@@ -205,65 +205,25 @@
     <div class="filter-group">
       <div>
         <h3>Type</h3>
-        <label for="areaattack">
+        <label for="tank">
           <input
-            name="areaattack"
-            id="areaattack"
+            name="tank"
+            id="tank"
             type="checkbox"
             bind:group={troopType}
             on:change={filterCommanders}
-            value="Area Attack" />
-          Area Attack
+            value="Tank" />
+          Tank
         </label>
-        <label for="attackdefense">
+        <label for="dps">
           <input
-            name="attackdefense"
-            id="attackdefense"
+            name="dps"
+            id="dps"
             type="checkbox"
             bind:group={troopType}
             on:change={filterCommanders}
-            value="Attack & Defense" />
-          Attack &amp; Defense
-        </label>
-        <label for="defensedisable">
-          <input
-            name="defensedisable"
-            id="defensedisable"
-            type="checkbox"
-            bind:group={troopType}
-            on:change={filterCommanders}
-            value="Defense & Disable" />
-          Defense &amp; Disable
-        </label>
-        <label for="defensecc">
-          <input
-            name="defensecc"
-            id="defensecc"
-            type="checkbox"
-            bind:group={troopType}
-            on:change={filterCommanders}
-            value="Defense & CC" />
-          Defense &amp; CC
-        </label>
-        <label for="defensive">
-          <input
-            name="defensive"
-            id="defensive"
-            type="checkbox"
-            bind:group={troopType}
-            on:change={filterCommanders}
-            value="Defensive" />
-          Defensive
-        </label>
-        <label for="singletarget">
-          <input
-            name="singletarget"
-            id="singletarget"
-            type="checkbox"
-            bind:group={troopType}
-            on:change={filterCommanders}
-            value="Single Target Attack" />
-          Single Target Attack
+            value="DPS" />
+          DPS
         </label>
         <label for="support">
           <input
@@ -274,16 +234,6 @@
             on:change={filterCommanders}
             value="Support" />
           Support
-        </label>
-        <label for="supporthealing">
-          <input
-            name="supporthealing"
-            id="supporthealing"
-            type="checkbox"
-            bind:group={troopType}
-            on:change={filterCommanders}
-            value="Support & Healing" />
-          Support &amp; Healing
         </label>
       </div>
       <div class="button-group">
