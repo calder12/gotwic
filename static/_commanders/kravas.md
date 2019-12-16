@@ -3,7 +3,7 @@ layout: blog
 title: Kravas
 date: 2019-12-16T03:05:51.042Z
 troop_type: Bowmen
-type: Area Attack
+type: DPS
 acquisition: Free
 image:
   alt: Kravas
