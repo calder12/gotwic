@@ -3,7 +3,7 @@ layout: blog
 title: Andrea
 date: 2019-12-16T01:31:31.855Z
 troop_type: Infantry
-type: Defensive
+type: Tank
 acquisition: Pay
 image:
   alt: Image of Andrea
