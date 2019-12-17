@@ -11,11 +11,10 @@
 </script>
 
 <script>
-  import fm from 'front-matter';
-  import MarkdownIt from 'markdown-it';
+  import fm from "front-matter";
+  import MarkdownIt from "markdown-it";
 
-	export let postMd;
-	console.log(postMd)
+  export let postMd;
 
   const md = new MarkdownIt();
 
@@ -23,26 +22,16 @@
   $: commander = {
     ...frontMatter.attributes,
     html: md.render(frontMatter.body)
-	};
+  };
 </script>
 
 <style>
+  .content {
+    max-width: 56rem;
+  }
   .content :global(h2) {
     font-size: 1.4em;
     font-weight: 500;
-  }
-
-  .content :global(pre) {
-    background-color: #f9f9f9;
-    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
-    padding: 0.5em;
-    border-radius: 2px;
-    overflow-x: auto;
-  }
-
-  .content :global(pre) :global(code) {
-    background-color: transparent;
-    padding: 0;
   }
 
   .content :global(ul) {
@@ -52,12 +41,17 @@
   .content :global(li) {
     margin: 0 0 0.5em 0;
   }
-  .commander {
+  .commander-image-container {
     border-radius: 0.25rem;
     text-align: center;
     transition: 0.3s;
     width: 227px;
     position: relative;
+  }
+
+  .commander {
+    display: grid;
+    grid-template-columns: 260px 1fr;
   }
 
   .commander-image {
@@ -67,27 +61,57 @@
     position: absolute;
     top: -6px;
     left: 0;
-  }
+	}
+	td {
+		padding: 0.25rem 0.5rem;
+	}
 </style>
 
 <svelte:head>
-  <title>{commander.title} :: Game of Thrones Winter is coming {commander.troop_type} Commander</title>
+  <title>
+    {commander.title} :: Game of Thrones Winter is coming {commander.troop_type}
+    Commander
+  </title>
 </svelte:head>
 
-<h1>{commander.title}</h1>
 <p class="breadcrumbs">
-	<a href="/" title="Home">Home</a> > <a href="commanders" title="commanders page">Commanders</a> > {commander.title}
+  <a href="/" title="Home">Home</a>
+  >
+  <a href="commanders" title="commanders page">Commanders</a>
+  > {commander.title}
 </p>
-<div class="commander">
-  <img
-    class="troop-type-image"
-    src="{commander.troop_type}.png"
-    alt="{commander.troop_type} badge" />
-  <img
-    class="commander-image"
-    src="{commander.image.src}"
-    alt="Image of {commander.title} - {commander.troop_type} commander." />
-</div>
+<h1>{commander.title}</h1>
 <div class="content">
+  <div class="commander">
+    <div class="commander-image-container">
+      <img
+        class="troop-type-image"
+        src="{commander.troop_type}.png"
+        alt="{commander.troop_type} badge" />
+      <img
+        class="commander-image"
+        src={commander.image.src}
+        alt="Image of {commander.title} - {commander.troop_type} commander." />
+    </div>
+		<div>
+		<table>
+			<tbody>
+				<tr>
+					<td><strong>Troop Type:</strong></td>
+					<td>{commander.troop_type}</td>
+				</tr>
+				<tr>
+					<td><strong>Commander Type:</strong></td>
+					<td>{commander.type}</td>
+				</tr>
+				<tr>
+					<td><strong>Acquisition:</strong></td>
+					<td>{commander.acquisition} (see description for details)</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+  </div>
+	<h2>Description</h2>
   {@html commander.html}
 </div>

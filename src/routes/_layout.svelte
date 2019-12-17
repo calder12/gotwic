@@ -1,5 +1,6 @@
 <script>
 	import Nav from '../components/Nav.svelte';
+	import Sidebar from '../components/Sidebar.svelte';
 
 	export let segment;
 </script>
@@ -14,7 +15,7 @@
 	}
 	.wrapper {
 		display: grid;
-		grid-template-columns: 350px 1fr;
+		grid-template-columns: 350px 1fr 350px;
 		height: 100vh;
 	}
 </style>
@@ -25,4 +26,6 @@
 <main>
 	<slot></slot>
 </main>
+
+<Sidebar />
 </div>
