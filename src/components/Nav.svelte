@@ -1,112 +1,44 @@
 <script>
-  export let segment;
+	import { fly } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
+	export let segment;
+
 </script>
 
 <style>
-  * {
-    box-sizing: border-box;
-  }
-
-  .main-navigation {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    margin: 2em;
-    margin-top: 1rem;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: column;
-  }
-  .menu li {
-    display: block;
-    list-style-type: none;
-    text-transform: uppercase;
-    width: 100%;
-  }
-  .menu li a {
-    display: flex;
-    text-align: center;
-    text-decoration: none;
-    color: #777;
-    padding: 1rem;
-  }
-  .menu li a:hover {
-    background: #666;
-    color: #fff;
-  }
-
-  @media (min-width: 800px) {
-    .menu {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-
-  .menu-item-has-children > a:after {
-    content: "\2304";
-		padding: 1px;
-		margin-top: -15px;
-    font-size: 1.5rem;
-    margin-left: 1rem;
-  }
-
-  nav ul ul {
-    display: none;
-  }
-
-  @media (min-width: 800px) {
-    nav ul ul {
-      display: none;
-      position: absolute;
-    }
-  }
-
-  nav ul li:hover > ul {
-    display: block;
-    color: #fff;
-    padding-left: 2rem;
-  }
-
-  @media (min-width: 800px) {
-    nav ul li:hover > ul {
-      padding-left: 0;
-      background: #666;
-      z-index: 999;
-    }
-
-    nav ul li:hover > ul a {
-      color: #fff;
-    }
-
-    .sub-menu li:hover,
-    .sub-menu li a:hover {
-      background: #ddd;
-      color: #777;
-    }
-
-    .sub-menu li {
-      display: flex;
-      padding-right: 2em;
-    }
-
-    nav ul ul ul {
-      margin: 0 0 0 100%;
-      box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-    }
-  }
-  .menu a.selected {
-		background: #777;
-		color: #fff;
-  }
+	nav {
+		background-color: #202225;
+		padding: 2rem 1rem;
+		box-shadow: 5px 0 5px -5px #000;
+	}
+	.menu {
+		position: sticky;
+		position: -webkit-sticky;
+		top: 2rem;
+		margin: 0 1rem;
+		padding: 0;
+	}
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		margin-bottom: 1rem;
+	}
+	li a {
+		text-decoration: none;
+		display: block;
+		padding: 0.5rem;
+	}
+	li a:hover {
+		background-color: #333;
+	}
+	.selected {
+		background-color: #333;
+	}
 </style>
-
-<nav class="main-navigation">
+<nav>
   <ul class="menu">
     <li>
       <a class:selected={segment === undefined} href=".">home</a>
@@ -115,12 +47,7 @@
       <a class:selected={segment === 'about'} href="about">about</a>
     </li>
     <li class="menu-item-has-children">
-      <a class:selected={segment === 'research'} href="research">research</a>
-      <ul class="sub-menu">
-        <li>
-          <a href="/research/calculator">research calculator</a>
-        </li>
-      </ul>
+      <a class:selected={segment === 'research'} href="research">research calculator</a>
     </li>
     <li>
       <a class:selected={segment === 'commanders'} href="commanders">
