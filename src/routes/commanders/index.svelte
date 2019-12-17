@@ -133,6 +133,11 @@
   .commander-image {
     object-fit: cover;
   }
+  .troop-type-image {
+    position: absolute;
+    top: -6px;
+    left: 0;
+  }
 </style>
 
 <svelte:head>
@@ -276,6 +281,10 @@
       transition:fade={{ delay: 50, duration: 150 }}>
       <div class="commander">
         <h3>{commander.title}</h3>
+        <img 
+          class="troop-type-image"
+          src="{commander.troop_type}.png"
+          alt="{commander.troop_type} badge"/>
         <img
           class="commander-image"
           src="/commanders/{commander.slug}.png"

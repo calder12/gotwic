@@ -59,6 +59,9 @@
 
 <h1>{post.title}</h1>
 <p>{post.date}</p>
+<p class="breadcrumbs">
+	<a href="/" title="Home">Home</a> > <a href="blog" title="blog page">Blog</a> > {post.title}
+</p>
 
 <div class='content'>
 	{@html post.html}
