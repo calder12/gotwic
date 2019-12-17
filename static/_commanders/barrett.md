@@ -12,6 +12,6 @@ image:
 ---
 Barrett
 
-Acquisition
+## Acquisition
 
 Barrett is only available as part of the Westeros quest right now, but expect him to become a paid commander soon. He is available by completing Westeros as a free to play player, but you get more medals if you buy the Westeros Pass for 100 black diamonds.
