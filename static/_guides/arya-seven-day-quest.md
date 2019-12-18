@@ -6,23 +6,15 @@ category: Beginner
 ---
 Very early in the game you will receive a seven day quest to allow you to unlock the commander Arya and upgrade her to blue quality. This quest consists of 3 different tasks with multiple levels, each day and one special purchase.
 
-
-
 Each completed task is worth 1 point, each special purchase (blue diamonds) is worth 5 points. All the quests are retroactive, meaning you do not have to do them after they unlock. So for example if you win at the Training Grounds 20 times before day 3 you will be able to unlock that entire tree right away when you get to day 3.
 
-
-
-To unlock Arya in blue quality you must attain 100 points of a possible 170 points
-
-
+To unlock Arya in blue quality you must attain 100 points of a possible 182 points
 
 Note: The Arya quest is very easily doable even for free to play players and even without buying the special offers!
 
-
-
 ## Day One – Total 26 points
 
-Total Login
+**Total Login**
 
 * Login for 1 day – 15k Gold Dragoons, 100 VIP points, 1 Precise Transfer
 * Login for 2 days – 15k Gold Dragoons, 100 VIP points, 2 Recall Marching
@@ -165,7 +157,7 @@ To add friends you can click someone’s profile in chat and choose Add Friend, 
 
 For power light troops = 2 each, veteran troops = 8 each, elite troops = 24 each and royal troops = 36 each.
 
-_**Do not try to complete these quests with light troops!**_
+**_Do not try to complete these quests with light troops!_**
 
 * Attain 600 power in troops – Marching Boots, 15m Training Speedup, 15m Healing Speedup
 * Attain 3,000 power in troops – Marching Boots, 15m Training Speedup, 15m Healing Speedup
@@ -186,7 +178,7 @@ _**Do not try to complete these quests with light troops!**_
 
 **Commander Level**
 
-_**Remember after level 15 your commander level cannot exceed your lord level!**_
+**_Remember after level 15 your commander level cannot exceed your lord level!_**
 
 * Attain Level 5 – 50k Wood, 50k Stone, 50k Iron
 * Attain Level 10 – 50k Wood, 50k Stone, 50k Iron
