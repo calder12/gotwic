@@ -141,7 +141,7 @@
 </style>
 
 <svelte:head>
-  <title>Commanders</title>
+  <title>Commanders :: Game of Thrones Winter is Coming</title>
 </svelte:head>
 
 <h1>Commanders</h1>
