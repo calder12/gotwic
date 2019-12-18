@@ -25,6 +25,6 @@
 
 <ul>
 	{#each guides as guide}
-		<li><a rel='prefetch' href='blog/{guide.slug}'>{guide.title}</a></li>
+		<li><a rel='prefetch' href='guides/{guide.slug}'>{guide.title}</a></li>
 	{/each}
 </ul>

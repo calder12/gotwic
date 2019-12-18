@@ -1,6 +1,6 @@
 <script context="module">                                                                                                                                                                                                                                                                   
   export async function preload({ params, query }) {
-    const res = await this.fetch(`_guidess/${params.slug}.md`);
+    const res = await this.fetch(`_guides/${params.slug}.md`);
 
     if (res.status === 200) {
       return { guideMd: await res.text() };
@@ -48,8 +48,8 @@
 		line-height: 1.5;
 	}
 
-	.content :global(li) {
-		margin: 0 0 0.5em 0;
+	.content {
+		max-width: 56rem;
 	}
 </style>
 

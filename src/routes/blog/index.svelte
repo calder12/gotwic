@@ -18,7 +18,7 @@
 </style>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>Blog :: Game of Thrones Winter is Coming</title>
 </svelte:head>
 
 <h1>Recent posts</h1>
