@@ -3,6 +3,10 @@
 	import Sidebar from '../components/Sidebar.svelte';
 
 	export let segment;
+
+	import { stores } from '@sapper/app';
+	const { page } = stores();
+	console.log($page)
 </script>
 
 <style>
@@ -20,10 +24,9 @@
 		height: 100vh;
 	}
 </style>
-
+{$page}
 <div class="wrapper">
 <Nav {segment}/>
-
 <main>
 	<slot></slot>
 </main>
