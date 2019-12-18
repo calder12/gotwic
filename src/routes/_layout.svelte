@@ -24,7 +24,7 @@
 		height: 100vh;
 	}
 </style>
-{$page}
+{$page.path}
 <div class="wrapper">
 <Nav {segment}/>
 <main>
