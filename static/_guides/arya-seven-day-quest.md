@@ -2,7 +2,10 @@
 layout: blog
 title: Arya Seven Day Quest
 date: 2019-12-18T03:04:44.183Z
-category: Beginner
+category:
+  - Beginner
+  - Commanders
+  - Quests
 ---
 Very early in the game you will receive a seven day quest to allow you to unlock the commander Arya and upgrade her to blue quality. This quest consists of 3 different tasks with multiple levels, each day and one special purchase.
 
