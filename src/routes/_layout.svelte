@@ -12,6 +12,7 @@
 		padding: 2rem;
 		margin: 0 auto;
 		box-sizing: border-box;
+		overflow: auto;
 	}
 	.wrapper {
 		display: grid;

@@ -10,9 +10,9 @@
 		background-color: #202225;
 		padding: 2rem 1rem;
 		box-shadow: 5px 0 5px -5px #000;
+		overflow: auto;
 	}
 	.menu {
-		position: sticky;
 		position: -webkit-sticky;
 		top: 2rem;
 		margin: 0 1rem;

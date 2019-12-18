@@ -56,7 +56,6 @@
 <svelte:head>
 	<title>{guide.title}</title>
 </svelte:head>
-
 <p class="breadcrumbs">
 	<a href="/" title="Home">Home</a> > <a href="guides" title="guide page">Guides</a> > {guide.title}
 </p>
