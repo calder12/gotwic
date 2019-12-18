@@ -24,7 +24,7 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Category", name: "category", widget: "select", options: ["Alliances", "Beginner", "Combat", "Commanders", "Events", "Inner City", "Lords", "Quests", "World Map"]}
+      - {label: "Category", name: "category", widget: "select", multiple: true, options: ["Alliances", "Beginner", "Combat", "Commanders", "Events", "Inner City", "Lords", "Quests", "World Map"]}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "commander" # Used in routes, e.g., /admin/collections/blog
     label: "Commander" # Used in the UI
