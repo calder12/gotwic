@@ -37,7 +37,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Troop Type", name: "troop_type", widget: "select", options: ["Infantry", "Spearmen", "Cavalry", "Bowmen"]}
       - {label: "Type", name: "type", widget: "select", options: ["Tank","DPS", "Support"]}
-      - {label: "Acquisition", name: "acquisition", widget: "select", options: ["Free", "Pay"]}
+      - {label: "Acquisition", name: "acquisition", widget: "select", options: ["Free", "Pay", "Not Available Yet"]}
       - name: image
         label: Image
         widget: object
