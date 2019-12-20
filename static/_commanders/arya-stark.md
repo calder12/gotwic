@@ -14,4 +14,4 @@ Arya is the second and youngest daughter of Eddard and Catelyn Stark. Unlike her
 
 ## Acquisition
 
-You can get Arya to Rare quality in the 7 day quest that is available to new players when they first start the game. She is also available in the Weirwood Elite Trials at stages 2-18, 4-15, 6-9 and 7-18
+You can get Arya to Rare quality in the [7 day quest](/guides/arya-seven-day-quest) that is available to new players when they first start the game. She is also available in the Weirwood Elite Trials at stages 2-18, 4-15, 6-9 and 7-18
