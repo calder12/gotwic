@@ -6,7 +6,6 @@
 
 	import { stores } from '@sapper/app';
 	const { page } = stores();
-	console.log($page)
 </script>
 
 <style>
@@ -24,7 +23,6 @@
 		height: 100vh;
 	}
 </style>
-{$page.path}
 <div class="wrapper">
 <Nav {segment}/>
 <main>
