@@ -31,7 +31,8 @@
         ...researches,
         slug: makeSlug(researches),
         checked: checkChecked(researches)
-      }));
+      })
+      )
   };
 
   const checkChecked = research => {
