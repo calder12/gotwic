@@ -74,6 +74,7 @@
   </title>
 </svelte:head>
 
+<div class="container">
 <p class="breadcrumbs">
   <a href="/" title="Home">Home</a>
   >
@@ -114,4 +115,5 @@
   </div>
 	<h2>Description</h2>
   {@html commander.html}
+</div>
 </div>

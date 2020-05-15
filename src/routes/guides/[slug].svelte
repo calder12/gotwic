@@ -56,6 +56,7 @@
 <svelte:head>
 	<title>{guide.title}</title>
 </svelte:head>
+<div class="container">
 <p class="breadcrumbs">
 	<a href="/" title="Home">Home</a> > <a href="guides" title="guide page">Guides</a> > {guide.title}
 </p>
@@ -64,4 +65,5 @@
 
 <div class='content'>
 	{@html guide.html}
+</div>
 </div>

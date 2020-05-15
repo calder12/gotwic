@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Aliance Basics
+title: Alliance Basics
 date: 2019-12-18T03:04:44.183Z
 category:
   - Beginner
@@ -9,7 +9,7 @@ category:
 
 Being part of an alliance in the Game or Thrones – Winter is coming browser game is critical to your progression. This is not a game you can succeed at as a single player, all the most important game mechanics rely on you being part of an alliance and working together with your alliance mates to progress.
 
-##Quick Benefits of Being in an Alliance 
+## Quick Benefits of Being in an Alliance 
 
 * Alliance helps on construction and research tasks
 * The ability to participate in Rebel Camp rallies

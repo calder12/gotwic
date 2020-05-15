@@ -144,152 +144,154 @@
   <title>Commanders :: Game of Thrones Winter is Coming</title>
 </svelte:head>
 
-<h1>Commanders</h1>
-<h2>
-  Filters
-  <span class="toggle" on:click={toggleFilters}>
-    {#if showFilters}Hide{:else}Show{/if}
-  </span>
-</h2>
-{#if showFilters}
-  <div class="filters" transition:slide>
-    <div class="filter-group">
-      <div>
-        <h3>Troop Type</h3>
-        <label for="infantry">
-          <input
-            name="infantry"
-            id="infantry"
-            type="checkbox"
-            bind:group={troopClasses}
-            on:change={filterCommanders}
-            value="Infantry" />
-          Infantry
-        </label>
-        <label for="cavalry">
-          <input
-            name="cavalry"
-            id="cavalry"
-            type="checkbox"
-            bind:group={troopClasses}
-            on:change={filterCommanders}
-            value="Cavalry" />
-          Cavalry
-        </label>
-        <label for="spearmen">
-          <input
-            name="spearmen"
-            id="spearmen"
-            type="checkbox"
-            bind:group={troopClasses}
-            on:change={filterCommanders}
-            value="Spearmen" />
-          Spearmen
-        </label>
-        <label for="bowmen">
-          <input
-            name="bowmen"
-            id="bowmen"
-            type="checkbox"
-            bind:group={troopClasses}
-            on:change={filterCommanders}
-            value="Bowmen" />
-          Bowmen
-        </label>
+<div class="container">
+  <h1>Commanders</h1>
+  <h2>
+    Filters
+    <span class="toggle" on:click={toggleFilters}>
+      {#if showFilters}Hide{:else}Show{/if}
+    </span>
+  </h2>
+  {#if showFilters}
+    <div class="filters" transition:slide>
+      <div class="filter-group">
+        <div>
+          <h3>Troop Type</h3>
+          <label for="infantry">
+            <input
+              name="infantry"
+              id="infantry"
+              type="checkbox"
+              bind:group={troopClasses}
+              on:change={filterCommanders}
+              value="Infantry" />
+            Infantry
+          </label>
+          <label for="cavalry">
+            <input
+              name="cavalry"
+              id="cavalry"
+              type="checkbox"
+              bind:group={troopClasses}
+              on:change={filterCommanders}
+              value="Cavalry" />
+            Cavalry
+          </label>
+          <label for="spearmen">
+            <input
+              name="spearmen"
+              id="spearmen"
+              type="checkbox"
+              bind:group={troopClasses}
+              on:change={filterCommanders}
+              value="Spearmen" />
+            Spearmen
+          </label>
+          <label for="bowmen">
+            <input
+              name="bowmen"
+              id="bowmen"
+              type="checkbox"
+              bind:group={troopClasses}
+              on:change={filterCommanders}
+              value="Bowmen" />
+            Bowmen
+          </label>
+        </div>
+        <div class="button-group">
+          <button on:click={showAllClasses}>Show all</button>
+          <button on:click={clearAllClasses}>Clear all</button>
+        </div>
       </div>
-      <div class="button-group">
-        <button on:click={showAllClasses}>Show all</button>
-        <button on:click={clearAllClasses}>Clear all</button>
+      <div class="filter-group">
+        <div>
+          <h3>Type</h3>
+          <label for="tank">
+            <input
+              name="tank"
+              id="tank"
+              type="checkbox"
+              bind:group={troopType}
+              on:change={filterCommanders}
+              value="Tank" />
+            Tank
+          </label>
+          <label for="dps">
+            <input
+              name="dps"
+              id="dps"
+              type="checkbox"
+              bind:group={troopType}
+              on:change={filterCommanders}
+              value="DPS" />
+            DPS
+          </label>
+          <label for="support">
+            <input
+              name="support"
+              id="support"
+              type="checkbox"
+              bind:group={troopType}
+              on:change={filterCommanders}
+              value="Support" />
+            Support
+          </label>
+        </div>
+        <div class="button-group">
+          <button on:click={showAllTypes}>Show all</button>
+          <button on:click={clearAllTypes}>Clear all</button>
+        </div>
+      </div>
+      <div class="filter-group">
+        <div>
+          <h3>Acquisition</h3>
+          <label for="free">
+            <input
+              name="free"
+              id="free"
+              type="checkbox"
+              bind:group={acquisition}
+              on:change={filterCommanders}
+              value="Free" />
+            Free to Play
+          </label>
+          <label for="pay">
+            <input
+              name="pay"
+              id="pay"
+              type="checkbox"
+              bind:group={acquisition}
+              on:change={filterCommanders}
+              value="Pay" />
+            Pay to Win
+          </label>
+        </div>
+        <div class="button-group">
+          <button on:click={showAllAcquisitions}>Show all</button>
+          <button on:click={clearAllAcquisitions}>Clear all</button>
+        </div>
       </div>
     </div>
-    <div class="filter-group">
-      <div>
-        <h3>Type</h3>
-        <label for="tank">
-          <input
-            name="tank"
-            id="tank"
-            type="checkbox"
-            bind:group={troopType}
-            on:change={filterCommanders}
-            value="Tank" />
-          Tank
-        </label>
-        <label for="dps">
-          <input
-            name="dps"
-            id="dps"
-            type="checkbox"
-            bind:group={troopType}
-            on:change={filterCommanders}
-            value="DPS" />
-          DPS
-        </label>
-        <label for="support">
-          <input
-            name="support"
-            id="support"
-            type="checkbox"
-            bind:group={troopType}
-            on:change={filterCommanders}
-            value="Support" />
-          Support
-        </label>
-      </div>
-      <div class="button-group">
-        <button on:click={showAllTypes}>Show all</button>
-        <button on:click={clearAllTypes}>Clear all</button>
-      </div>
-    </div>
-    <div class="filter-group">
-      <div>
-        <h3>Acquisition</h3>
-        <label for="free">
-          <input
-            name="free"
-            id="free"
-            type="checkbox"
-            bind:group={acquisition}
-            on:change={filterCommanders}
-            value="Free" />
-          Free to Play
-        </label>
-        <label for="pay">
-          <input
-            name="pay"
-            id="pay"
-            type="checkbox"
-            bind:group={acquisition}
-            on:change={filterCommanders}
-            value="Pay" />
-          Pay to Win
-        </label>
-      </div>
-      <div class="button-group">
-        <button on:click={showAllAcquisitions}>Show all</button>
-        <button on:click={clearAllAcquisitions}>Clear all</button>
-      </div>
-    </div>
+  {/if}
+  <div class="commanders">
+    {#each displaycommanders as commander}
+      <a
+        rel="prefetch"
+        href="commanders/{commander.slug}"
+        class="commander-link"
+        transition:fade={{ delay: 50, duration: 150 }}>
+        <div class="commander">
+          <h3>{commander.title}</h3>
+          <img
+            class="troop-type-image"
+            src="{commander.troop_type}.png"
+            alt="{commander.troop_type} badge" />
+          <img
+            class="commander-image"
+            src="/commanders/{commander.slug}.png"
+            alt="Image of {commander.title} - {commander.troop_type} commander." />
+        </div>
+      </a>
+    {/each}
   </div>
-{/if}
-<div class="commanders">
-  {#each displaycommanders as commander}
-    <a
-      rel="prefetch"
-      href="commanders/{commander.slug}"
-      class="commander-link"
-      transition:fade={{ delay: 50, duration: 150 }}>
-      <div class="commander">
-        <h3>{commander.title}</h3>
-        <img 
-          class="troop-type-image"
-          src="{commander.troop_type}.png"
-          alt="{commander.troop_type} badge"/>
-        <img
-          class="commander-image"
-          src="/commanders/{commander.slug}.png"
-          alt="Image of {commander.title} - {commander.troop_type} commander." />
-      </div>
-    </a>
-  {/each}
 </div>

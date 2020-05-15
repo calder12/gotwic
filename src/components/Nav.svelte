@@ -11,6 +11,7 @@
 		padding: 2rem 1rem;
 		box-shadow: 5px 0 5px -5px #000;
 		overflow: auto;
+		z-index: 1000;
 	}
 	.menu {
 		position: -webkit-sticky;

@@ -135,6 +135,9 @@
     border-radius: 4px;
   }
 </style>
+<svelte:head>
+  <title>Research Calculator :: Game of Thrones Winter is Coming</title>
+</svelte:head>
 
 <div class="container">
   <h1>Research Calculator</h1>
@@ -161,14 +164,14 @@
         id="research-helps" />
     </div>
     <div class="form-group">
-      <label for="research-helps">Free Speedup Time (in minutes)</label>
+      <label for="research-free">Free Speedup Time (in minutes)</label>
       <input
         class="text-input"
         type="number"
         bind:value={freeSpeedup}
         on:change={calculateTotalTime}
-        placeholder="Enter number of helps"
-        id="research-helps" />
+        placeholder="Enter Free speedup time"
+        id="research-free" />
     </div>
     <div class="form-group">
     <label for="tree">Select Research Tree</label>
@@ -200,7 +203,7 @@
   <div class="contents">
     {#each displayResearches as research, index}
       {#if (research.level - 1) % 10 === 0}
-        <hr />
+        <p></p>
       {/if}
       <label for={research.slug}>
         <input

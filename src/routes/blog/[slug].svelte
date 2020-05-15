@@ -57,6 +57,7 @@
 	<title>{post.title}</title>
 </svelte:head>
 
+<div class="container">
 <p class="breadcrumbs">
 	<a href="/" title="Home">Home</a> > <a href="blog" title="blog page">Blog</a> > {post.title}
 </p>
@@ -65,4 +66,5 @@
 
 <div class='content'>
 	{@html post.html}
+</div>
 </div>
