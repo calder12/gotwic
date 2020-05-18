@@ -14,17 +14,15 @@
 		width: 100%;
 		margin: 0 auto;
 		box-sizing: border-box;
-		overflow: auto;
 	}
-	.wrapper {
-		display: grid;
-		grid-template-columns: 280px 1fr;
-		height: 100vh;
+	.content {
+		max-width: 90rem;
+		margin: 0 auto;
 	}
 </style>
-<div class="wrapper">
-<Nav {segment}/>
 <main>
-	<slot></slot>
+	<Nav {segment}/>
+	<div class="content">
+		<slot></slot>
+	</div>
 </main>
-</div>

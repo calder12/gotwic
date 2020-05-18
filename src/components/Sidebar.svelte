@@ -4,7 +4,7 @@
 
 <style>
   aside {
-    background-color: #2f3136;
+		background-color: #c5c6c7;
     box-shadow: 5px 0 5px -5px #222;
     height: 100vh;
 	}
