@@ -22,6 +22,7 @@
     margin: 0 auto;
   }
 
+
   h1 {
     font-size: 2.8em;
     text-transform: uppercase;
@@ -51,18 +52,17 @@
 </style>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>Nordmann Guide and Tools Site</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js">
 
   </script>
 </svelte:head>
 
 <div class="container">
-  <h1>Great success!</h1>
+  <h1>[NDM] Nordmann</h1>
 
   <figure>
-    <img alt="Borat" src="great-success.png" />
-    <figcaption>HIGH FIVE!</figcaption>
+    <img alt="Nordmann" src="ndm.png" />
   </figure>
 
   <p>
