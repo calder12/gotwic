@@ -27,7 +27,7 @@ This event lasts a week, **it is not a race**! Be picky about what you choose an
 
 ## NDM Expectations
 
-We have a minimum expectation of 1,200 points from every live person. This doesn't include farm alts, but the more points we get from those the better too! **I am going to be honest here, there is no reason to score under 1,500 points, and it is very easy if you have the time to check quests regularly to score 2,000 points even as a free to play player. Watching for 200 point diamond, spoils chest, alliance coin and help quests are all free to do.
+We have a minimum expectation of 1,200 points from every live person. This doesn't include farm alts, but the more points we get from those the better too! **I am going to be honest here, there is no reason to score under 1,500 points, and it is very easy if you have the time to check quests regularly to score 2,000 points even as a free to play player**. Watching for 200 point diamond, spoils chest, alliance coin and help quests are all free to do.
 
 We do expect members to purchase that 10th attempt on their main accounts as well, through alliance gifts we easily generate enough diamonds for that.
 
