@@ -29,7 +29,7 @@ Elite rebel groups also drop Oldtown bowmen troop appearance medals randomly. Th
 
 As mentioned rebel groups are a PVE mechanism but act like PVP attacks. As such you want to set up your attack to counter the group's troops with your formation, commanders, and talents. You can tell a group's formation by clicking on it and looking at the list of its troops. This is in the order of their formation. So in this image this rebel group has a front line of Cavalry and a second line of Spearmen.
 
-![alt text](formation.png "Rebel Group Formatio")
+![alt text](formation.png "Rebel Group Formation")
 
 As such you want to attack this group with a Spear / Infantry formation and matching commanders.
 
