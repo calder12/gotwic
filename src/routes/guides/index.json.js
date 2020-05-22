@@ -22,7 +22,7 @@ console.log(guides)
   );
 
   // Sort by reverse date, because it's a blog
-  guidesFrontMatter.sort((a, b) => (a.date < b.date ? 1 : -1));
+  guidesFrontMatter.sort((a, b) => (a.title > b.title ? 1 : -1));
 
   res.writeHead(200, {
     'Content-Type': 'application/json',
