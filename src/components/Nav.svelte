@@ -8,7 +8,7 @@
 <style>
 	nav {
 		background-color: #c5c6c7;
-		padding: 2rem 1rem;
+		padding: 0.75rem 1rem;
 		box-shadow: 0 5px 5px -5px #000;
 		overflow: auto;
 		z-index: 1000;

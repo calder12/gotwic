@@ -54,7 +54,7 @@
 </style>
 
 <svelte:head>
-	<title>{guide.title}</title>
+	<title>NDM - {guide.title}</title>
 </svelte:head>
 <div class="container">
 <p class="breadcrumbs">
