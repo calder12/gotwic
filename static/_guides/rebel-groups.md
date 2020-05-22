@@ -33,6 +33,8 @@ As mentioned rebel groups are a PVE mechanism but act like PVP attacks. As such 
 
 As such you want to attack this group with a Spear / Infantry formation and matching commanders.
 
+**Note** - You suffer no losses when attacking rebel groups, you get no wounded or deaths even if you lose.
+
 ### Faking formations
 
 You don't actually have to have formations unlocked to counter rebel groups. You can beat any rebel group (that you are strong enough to beat) by sending just the troops required to counter the first troop in their formation. So in the case of the group pictured above you can beat it by sending just Spearmen and Spearmen commanders.
